@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>JS</title>
+    </head>
+    <body>
+        
+
+        <select id="ray"></select>
+        <input type="text" maxlength="2" minlength="2" />
+        <select id="nom"></select>
+        
+
+        <script>
+            Nom();
+            function Nom(){
+                let n = "";
+                for(let i = 1; i<=999;i++){
+                    if(i<10)
+                    n += `<option value="00${i}">00${i}</option>`;
+                    else if(i>9 && i<100)
+                    n += `<option value="0${i}">0${i}</option>`;
+                    else
+                    n += `<option value="${i}">${i}</option>`;
+                }
+                document.getElementById("nom").innerHTML = n;
+            }
+            ray();
+            function ray(){
+                let n = "";
+                for(let i = 1; i<=9;i++) {
+                    
+                    if(i<10)
+                    n += `<option value="0${i}">0${i}</option>`;
+                    }
+                    for(let s = 10; s<=12;s++){
+                    n += `<option value="${s}">${s}</option>`;
+                    }
+                    
+                    for(let j = 14; j<=72;j++){
+                    n += `<option value="${j}">${j}</option>`;
+                
+                }
+                for(let p = 85; p<=85;p++){
+                    n += `<option value="${p}">${p}</option>`;
+                }
+                for(let c = 90; c<=90;c++){
+                    n += `<option value="${c}">${c}</option>`;
+                }
+                for(let d = 99; d<=99;d++){
+                    n += `<option value="${d}">${d}</option>`;
+                }
+
+                document.getElementById("ray").innerHTML = n;
+            }
+
+
+        </script>
+
+    </body>
+</html>
